@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExportableFileTemplateSettings">
+    <j2ee_templates>
+      <template name="qt.CMakeLists.txt" reformat="true" live-template-enabled="false" enabled="false" />
+    </j2ee_templates>
+    <default_templates>
+      <template name="Widget.rs" file-name="$snake_widget_name/state.rs" reformat="true" live-template-enabled="false">
+        <template name="Widget.rs.child.0.rs" file-name="$snake_widget_name/message" reformat="true" live-template-enabled="false" />
+        <template name="Widget.rs.child.1.rs" file-name="$snake_widget_name/view" reformat="true" live-template-enabled="false" />
+        <template name="Widget.rs.child.2.rs" file-name="$snake_widget_name/mod" reformat="true" live-template-enabled="false" />
+        <template name="Widget.rs.child.3.rs" file-name="$snake_widget_name/update" reformat="true" live-template-enabled="false" />
+      </template>
+      <template name="Widget.rs.child.0.rs" file-name="$snake_widget_name/message" reformat="true" live-template-enabled="false" />
+      <template name="Widget.rs.child.1.rs" file-name="$snake_widget_name/view" reformat="true" live-template-enabled="false" />
+      <template name="Widget.rs.child.2.rs" file-name="$snake_widget_name/mod" reformat="true" live-template-enabled="false" />
+      <template name="Widget.rs.child.3.rs" file-name="$snake_widget_name/update" reformat="true" live-template-enabled="false" />
+    </default_templates>
+  </component>
+</project>
