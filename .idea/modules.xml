@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/GitOrb.iml" filepath="$PROJECT_DIR$/.idea/GitOrb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/GitLinden.iml" filepath="$PROJECT_DIR$/.idea/GitLinden.iml" />
     </modules>
   </component>
 </project>
