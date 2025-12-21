@@ -5,3 +5,4 @@ edition.workspace = true
 
 [dependencies]
 git2.workspace = true
+springtime-di.workspace = true
