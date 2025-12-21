@@ -1,10 +1,21 @@
-use std::sync::Arc;
+use std::{path::Path, sync::Arc};
 
-use git::business::{module_assembly::GitModule, repo_manager::RepoManager};
+use git::business::{module_assembly::GitModule, repository::{RepositoryManager}};
 use shaku::HasComponent;
 
 pub(crate) struct BranchList {
-    repo_manager: Arc<dyn RepoManager>,
+    repo_manager: Arc<dyn RepositoryManager>,
+}
+
+impl BranchList {
+    pub fn get_branches(&self) -> Vec<String> {
+        let path = Path::new(".");
+        let Ok(repository) = self.repo_manager.get_repository(path) else {
+            return Vec::new();
+        };
+
+        repository.branches()
+    }
 }
 
 impl Default for BranchList {

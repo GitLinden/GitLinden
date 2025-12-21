@@ -6,3 +6,4 @@ edition.workspace = true
 [dependencies]
 git2.workspace = true
 shaku.workspace = true
+thiserror.workspace = true
