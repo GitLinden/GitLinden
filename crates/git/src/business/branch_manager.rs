@@ -1,10 +1,14 @@
+use shaku::{Component, Interface};
+
 use crate::model::branch::Branch;
 
-pub trait BranchManager {
+pub trait BranchManager: Interface {
     fn get_branches(&self) -> Vec<Branch>;
 }
 
-struct Git2BranchManagerImpl {
+#[derive(Component)]
+#[shaku(interface = BranchManager)]
+pub(crate) struct Git2BranchManagerImpl {
 
 }
 

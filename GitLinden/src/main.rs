@@ -1,10 +1,9 @@
 mod ui;
 
-use iced::{application, window::run};
-use springtime_di::factory::ComponentFactoryBuilder;
+use iced::application;
 
-use crate::ui::main_screen::{self, MainScreen};
+use crate::ui::main_screen::MainScreen;
 
 fn main() -> iced::Result {
-    application(MainScreen::new, MainScreen::update, MainScreen::view).run()
+    application(MainScreen::default, MainScreen::update, MainScreen::view).run()
 }

@@ -1,17 +1,18 @@
-use git::business::repo_manager::RepoManager;
-use springtime_di::{factory::ComponentFactory, instance_provider::{ComponentInstancePtr, TypedComponentInstanceProvider}};
+use std::sync::Arc;
+
+use git::business::{module_assembly::GitModule, repo_manager::RepoManager};
+use shaku::HasComponent;
 
 pub(crate) struct BranchList {
-    repo_manager: ComponentInstancePtr<dyn RepoManager + Send + Sync>
+    repo_manager: Arc<dyn RepoManager>,
 }
 
-impl BranchList {
-    pub(crate) fn new(factory: &mut ComponentFactory) -> Self {
-        let repo_manager = factory.primary_instance_typed::<dyn RepoManager + Send + Sync>().expect("");
-
+impl Default for BranchList {
+    fn default() -> Self {
+        let git_module = GitModule::builder().build();
 
         Self {
-            repo_manager
+            repo_manager: git_module.resolve(),
         }
     }
 }

@@ -1,14 +1,13 @@
-use springtime_di::{Component, component_alias, injectable};
+use shaku::{Component, Interface};
 
-#[injectable]
-pub trait RepoManager {
+pub trait RepoManager: Interface {
 }
 
 #[derive(Component)]
-struct Git2RepoManagerImpl {
+#[shaku(interface = RepoManager)]
+pub(crate) struct Git2RepoManagerImpl {
 }
 
-#[component_alias]
 impl RepoManager for Git2RepoManagerImpl {
     
 }

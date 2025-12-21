@@ -6,4 +6,4 @@ edition.workspace = true
 [dependencies]
 git.workspace = true
 iced.workspace = true
-springtime-di.workspace = true
+shaku.workspace = true
