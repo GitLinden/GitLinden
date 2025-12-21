@@ -1,9 +1,10 @@
 use crate::ui::branch_list::message::Message;
 use crate::ui::branch_list::state::BranchList;
+use crate::ui::main_screen::MainMessage;
 use iced::Task;
 
 impl BranchList {
-    fn update(&mut self, message: Message) -> Task<Message> {
+    pub fn update(&mut self, message: Message) -> Task<MainMessage> {
         match message {}
     }
 }

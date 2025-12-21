@@ -5,7 +5,7 @@ use iced::Task;
 impl MainScreen {
     pub(crate) fn update(&mut self, message: Message) -> Task<Message> {
         match message {
-            Message::BranchList(_) => Task::none(),
+            Message::BranchList(message) => self.branch_list.update(message),
         }
     }
 }
