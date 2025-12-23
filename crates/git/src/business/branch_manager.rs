@@ -8,9 +8,7 @@ pub trait BranchManager: Interface {
 
 #[derive(Component)]
 #[shaku(interface = BranchManager)]
-pub(crate) struct Git2BranchManagerImpl {
-
-}
+pub(crate) struct Git2BranchManagerImpl {}
 
 impl BranchManager for Git2BranchManagerImpl {
     fn get_branches(&self) -> Vec<Branch> {

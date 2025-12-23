@@ -3,7 +3,7 @@ use std::path::Path;
 use shaku::Component;
 
 use crate::{
-    business::repository::{manager::RepositoryManager, error::RepositoryError},
+    business::repository::{error::RepositoryError, manager::RepositoryManager},
     model::repository::Repository,
 };
 

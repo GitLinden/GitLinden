@@ -1,3 +1,1 @@
-pub struct Branch {
-    
-}
+pub struct Branch {}

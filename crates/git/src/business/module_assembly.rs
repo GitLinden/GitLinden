@@ -1,8 +1,7 @@
 use shaku::module;
 
 use crate::business::{
-    branch_manager::Git2BranchManagerImpl,
-    repository::implementation::Git2RepoManagerImpl,
+    branch_manager::Git2BranchManagerImpl, repository::implementation::Git2RepoManagerImpl,
 };
 
 module! {
