@@ -1,7 +1,7 @@
 use crate::ui::branch_list::components::branch;
 use crate::ui::branch_list::message::Message;
 use crate::ui::branch_list::state::BranchList;
-use iced::widget::{column, scrollable, text};
+use iced::widget::{column, mouse_area, scrollable, text};
 use iced::{Center, Element};
 
 impl BranchList {
@@ -12,6 +12,7 @@ impl BranchList {
                 let selected = branch_name == self.selected_branch;
                 branch(branch_name, selected).map(Message::Branch)
             })),),
+            mouse_area(text("coucou"))
         ]
         .padding(20)
         .align_x(Center)
