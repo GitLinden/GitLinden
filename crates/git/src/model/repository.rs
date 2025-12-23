@@ -1,20 +1,26 @@
-use std::path::Path;
+use std::{path::Path, sync::Mutex};
 
 use git2::{BranchType, Error};
 
 pub struct Repository {
-    repository: git2::Repository,
+    repository: Mutex<git2::Repository>,
 }
 
 impl Repository {
     pub(crate) fn open(path: &Path) -> Result<Repository, Error> {
         let repository = git2::Repository::open(path)?;
 
-        Ok(Self { repository })
+        Ok(Self {
+            repository: Mutex::new(repository),
+        })
     }
 
     pub fn branches(&self) -> Vec<String> {
-        let Ok(branches) = self.repository.branches(Some(BranchType::Local)) else {
+        let Ok(repository) = self.repository.try_lock() else {
+            return Vec::new();
+        };
+
+        let Ok(branches) = repository.branches(Some(BranchType::Local)) else {
             return Vec::new();
         };
 
