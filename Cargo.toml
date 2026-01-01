@@ -14,4 +14,6 @@ git = { path = "crates/git" }
 git2 = "0.20.3"
 iced = "0.14.0"
 shaku = "0.6.2"
+slint = "1.14.1"
+slint-build = "1.14.1"
 thiserror = "2.0.17"

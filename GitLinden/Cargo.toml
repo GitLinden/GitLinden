@@ -7,3 +7,7 @@ edition.workspace = true
 git.workspace = true
 iced.workspace = true
 shaku.workspace = true
+slint.workspace = true
+
+[build-dependencies]
+slint-build.workspace = true
